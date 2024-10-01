@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">WireFrame</string>
+    <string name="login_button">Login</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="title">Fantasy Fitness</string>
+</resources>
