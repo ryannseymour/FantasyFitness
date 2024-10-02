@@ -13,4 +13,10 @@
     <string name="quest2">Do 10 push ups</string>
     <string name="quest3">5 minutes of meditation</string>
     <string name="quest4">10 minutes of stretching</string>
+    <string-array name="workouts">
+        <item>Go for a run</item>
+        <item>5 minutes of meditation</item>
+        <item>10 push ups</item>
+        <item>10 minutes of stretching</item>
+    </string-array>
 </resources>
