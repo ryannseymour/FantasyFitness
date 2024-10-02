@@ -128,12 +128,13 @@ public class LoginActivity extends AppCompatActivity {
     private boolean verifyCredentials(SharedPreferences.Editor editor, String lastPassword)
     {
         if (!lastPassword.isEmpty() && lastPassword.equals(mPassword)) {
-            // Returning user. Save the remember me checkbox and username.
+            // Returning user. Save the username.
             editor.putString("username", mUsername);
             editor.apply();
         } else if (lastPassword.isEmpty() && !mPassword.isEmpty() && !mUsername.isEmpty()) {
             // First entry from user, so save it.
             editor.putString(mUsername, mPassword);
+            editor.putString("username", mUsername);
             editor.apply();
         }
         else if (mPassword.isEmpty() || mUsername.isEmpty()) {
