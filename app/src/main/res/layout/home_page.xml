@@ -5,14 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".HomeActivity"
-    android:background="@color/background_yellow">
+    android:background="@color/background_yellow"
+    android:id="@+id/home">
 
     <!-- Title at the top -->
     <TextView
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/title_home"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintTop_toTopOf="parent"
@@ -21,41 +21,62 @@
         android:layout_marginTop="16dp"
         android:gravity="center"/>
 
-    <!-- Checkboxes -->
-    <LinearLayout
-        android:id="@+id/checkbox_container"
+    <!-- Image and Checkboxes in a FrameLayout -->
+    <FrameLayout
+        android:id="@+id/image_with_checkboxes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         app:layout_constraintTop_toBottomOf="@id/title"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bottom_buttons"
         android:layout_marginTop="16dp">
 
-        <CheckBox
-            android:id="@+id/checkbox1"
+        <!-- Image in the background -->
+        <ImageView
+            android:id="@+id/center_image"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/quest1" />
+            android:src="@drawable/scroll"/>
+        <!-- Checkboxes -->
+        <LinearLayout
+            android:id="@+id/checkbox_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="16dp"
+            android:layout_gravity="center">
 
-        <CheckBox
-            android:id="@+id/checkbox2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/quest2" />
+            <CheckBox
+                android:id="@+id/quest1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:text="@string/quest1" />
 
-        <CheckBox
-            android:id="@+id/checkbox3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/quest3" />
+            <CheckBox
+                android:id="@+id/quest2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:text="@string/quest2" />
 
-        <CheckBox
-            android:id="@+id/checkbox4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/quest4" />
-    </LinearLayout>
+            <CheckBox
+                android:id="@+id/quest3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:text="@string/quest3" />
+
+            <CheckBox
+                android:id="@+id/quest4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:text="@string/quest4" />
+        </LinearLayout>
+    </FrameLayout>
 
     <!-- Bottom row with buttons (Add on left, Logout on right) -->
     <LinearLayout
@@ -69,23 +90,29 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
-        <!-- Add Button with Icon (now on the left) -->
+        <!-- New Workout Button -->
         <Button
             android:id="@+id/add_button"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Add"
+            android:layout_height="50dp"
+            android:text="@string/new_workout_button"
             android:drawableLeft="@android:drawable/ic_input_add"
-            android:padding="10dp"/>
+            android:drawablePadding="8dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:onClick="onClickNewWorkout"/>
 
-        <!-- Logout Button (now on the right) -->
+        <!-- Logout Button  -->
         <Button
             android:id="@+id/logout_button"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Logout" />
+            android:layout_height="50dp"
+            android:text="@string/logout_button"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:onClick="onLogoutClick"/>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

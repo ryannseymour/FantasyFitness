@@ -5,7 +5,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:stretchColumns="1"
-    android:background="@color/background_yellow">
+    android:background="@color/background_yellow"
+    android:id="@+id/login">
 
     <TableRow
         android:layout_width="match_parent"

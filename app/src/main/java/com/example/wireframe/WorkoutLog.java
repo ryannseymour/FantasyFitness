@@ -1,4 +1,6 @@
 package com.example.wireframe;
 
-public class WorkoutLog {
+import androidx.appcompat.app.AppCompatActivity;
+
+public class WorkoutLog extends AppCompatActivity {
 }
