@@ -2,6 +2,7 @@ package com.example.wireframe;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.widget.CheckBox;
@@ -24,13 +25,21 @@ public class LoginActivity extends AppCompatActivity {
     private EditText mPasswordEditText;
 
     /**
-     * OnCreate method for the activity.
+     * OnCreate method for the activity. Sets orientation of layout.
      * @param savedInstanceState The saved instance state.
      */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+
+        int orientation = getResources().getConfiguration().orientation;
+
+        if (orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            setContentView(R.layout.login_page_land);
+        } else {
+            setContentView(R.layout.login_page);
+        }
+
         mUsernameEditText = findViewById(R.id.username);
         mPasswordEditText = findViewById(R.id.password);
     }
