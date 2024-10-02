@@ -4,4 +4,7 @@
     <string name="username">Username</string>
     <string name="password">Password</string>
     <string name="title">Fantasy Fitness</string>
+    <string name="empty_username_or_password">Please enter your username and password</string>
+    <string name="wrong_password">Incorrect password. Please try again.</string>
+    <string name="wrong_username_or_password">Incorrect password. Please try again.</string>
 </resources>

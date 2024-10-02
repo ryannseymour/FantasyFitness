@@ -68,7 +68,8 @@
             android:text="@string/login_button"
             android:textSize="24sp"
             android:textStyle="bold"
-            android:textAlignment="center"  />
+            android:textAlignment="center"
+            android:onClick="goToHome"/>
     </TableRow>
 
 </TableLayout>
