@@ -9,4 +9,8 @@
     <string name="wrong_password">Incorrect password. Please try again.</string>
     <string name="wrong_username_or_password">Incorrect password. Please try again.</string>
     <string name="title_home">Today\'s Quests</string>
+    <string name="quest1">Go for a run</string>
+    <string name="quest2">Do 10 push ups</string>
+    <string name="quest3">5 minutes of meditation</string>
+    <string name="quest4">10 minutes of stretching</string>
 </resources>

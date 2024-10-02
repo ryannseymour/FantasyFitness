@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomeActivity">
+    tools:context=".HomeActivity"
+    android:background="@color/background_yellow">
 
     <!-- Title at the top -->
     <TextView
@@ -35,25 +36,25 @@
             android:id="@+id/checkbox1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Option 1" />
+            android:text="@string/quest1" />
 
         <CheckBox
             android:id="@+id/checkbox2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Option 2" />
+            android:text="@string/quest2" />
 
         <CheckBox
             android:id="@+id/checkbox3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Option 3" />
+            android:text="@string/quest3" />
 
         <CheckBox
             android:id="@+id/checkbox4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Option 4" />
+            android:text="@string/quest4" />
     </LinearLayout>
 
     <!-- Bottom row with buttons (Add on left, Logout on right) -->
